@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+    function getValue() {
+            const username = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            if(!username ||!age){
+                alert("please fill all the required fields");
+                return false;
+            }
+            if( age <= 0 ){
+                alert("please enter a valid age");
+                return false ;
+            }
+            if(age < 18) {
+                alert("You must be at least 18 years old.");
+                return false;
+            }
+            alert("Form successfully submitted");
+        }   
+
+    </script>
+</head>
+
+<body>
+    <form  method="get">
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
+        <input type="submit"  onclick="getValue()">
+</body>
+
+</html>
