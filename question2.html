@@ -15,12 +15,19 @@
     </div>
     <script>
         const mouseEvent = document.getElementById('changeColor');
-        mouseEvent.addEventListener('mouseenter', () => {
+        function enterMouse() {
             mouseEvent.style.backgroundColor = "green";
-        })
-        mouseEvent.addEventListener('mouseleave', () => {
+        }
+        function leaveMouse() {
             mouseEvent.style.backgroundColor = "grey";
-        })
+        }
+
+        mouseEvent.addEventListener('mouseenter', enterMouse)
+        mouseEvent.removeEventListener('mouseenter', enterMouse)
+        mouseEvent.addEventListener('mouseleave', leaveMouse)
+
+
+        mouseEvent.removeEventListener('mouseleave', leaveMouse)
     </script>
 </body>
 

@@ -1,3 +1,7 @@
 myarray=[1,2,3,"arya"];
-myarray.shift();
+
+function shiftElement(myarray){
+    myarray.shift();
+}
+shiftElement(myarray);
 console.log(myarray);
